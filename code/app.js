@@ -1,12 +1,70 @@
-const premioLoteria = {
-    normal : 1000,
-    bonoloto : 20000,
-    superpremio : 70000
+console.log(Math.floor(Math.random()* 255))
+
+function getCard(){
+    const club = ['J', 'Q','K', 'A'];
+    let  number = (Math.floor(Math.random() * 10)) + 1;    
+    let miClub = club[(Math.floor(Math.random() * club.length))];
+    return {
+            number : number,
+            club : miClub
+    }
 }
 
-for (let objectEntry of Object.entries(premioLoteria)){
-    console.log(objectEntry);
-}
+// const abecedario = 'abcdefghijklmnñopqrstuvwxyz';
+// function pangram(frase){
+//     for (let char of abecedario) {
+//         if(frase.toLowerCase().indexOf(char) === -1){
+//             console.log(char);
+//            return false;
+//         }
+//     }
+//     return true;
+// }
+
+// function media(miarray) {
+//     let suma=0;
+//     for (let num of miarray){
+//         suma += num;
+//     }
+//     return suma / miarray.length;
+// }
+
+
+// function isValidPassword(password, userName){    
+//     if (password.length < 8 || 
+//         password.indexOf(' ') !== -1 ||
+//         password.indexOf(userName) !== -1)
+//             return false;    
+//     return true;
+// }
+
+
+// console.log(isValidPassword('123 ','22'));
+// console.log(isValidPassword('12345678','12345678'));
+
+
+// 
+
+
+// function rollDie(numeroDados){
+//     for (let i= 0; i< numeroDados; i++){
+//         let roll = Math.floor(Math.random() * 6) + 1;
+//         console.log(`he sacado un ${roll}`);
+//     }
+// }
+
+// rollDie(12);
+
+
+// const premioLoteria = {
+//     normal : 1000,
+//     bonoloto : 20000,
+//     superpremio : 70000
+// }
+
+// for (let objectEntry of Object.entries(premioLoteria)){
+//     console.log(objectEntry);
+// }
 
 // console.log(premioLoteria[0]);
 // console.log(premioLoteria.normal);
