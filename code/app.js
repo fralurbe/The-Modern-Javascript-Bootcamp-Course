@@ -1,14 +1,120 @@
-console.log(Math.floor(Math.random()* 255))
 
-function getCard(){
-    const club = ['J', 'Q','K', 'A'];
-    let  number = (Math.floor(Math.random() * 10)) + 1;    
-    let miClub = club[(Math.floor(Math.random() * club.length))];
-    return {
-            number : number,
-            club : miClub
-    }
-}
+
+
+
+// hoot();
+
+// function hoot (){
+//     console.log("Awoooo");
+// }
+
+// howl();
+// function howl() {
+//     console.log("Awoooo");
+// }
+
+// console.log(animal);
+// var animal;
+
+
+// function grumpus(){
+//     alert('Fuera de aqui!')
+// }
+
+// const btn  = document.querySelector('button');
+// btn.addEventListener('click', function() {
+//     alert('Me has pulsado')
+// })
+
+// setTimeout(function(){
+//     alert('welcome!');
+// }, 3000);
+
+
+// function multiplyBy(multiplier) {
+//     return function(x) {
+//         console.log(`x= ${x}, multiplier = ${multiplier}`);
+//         return x * multiplier;
+//     }
+// }
+
+// const triple = multiplyBy(3);
+// const double = multiplyBy(2);
+
+
+// function callThreeTimes(f){
+//     f();
+//     f();
+//     f();
+// }
+
+// function cry(){
+//     console.log("Boo i'm crying");
+// }
+
+// function rage(){
+//     console.log("I hate everything");
+// }
+
+// function repeatNTimes(action, times){
+//     for(let i = 0;i<times; i++){
+//         action();
+//     }
+// }
+
+// const  add = function (x,y){
+//     return x + y;
+// }
+
+// const subtract = function (x,y){
+//     return x - y;
+// }
+
+// const multiply =  function (x,y) {
+//     return x * y;
+// }
+
+// const divide = function  (x,y){
+//     return x / y;
+// }
+
+// const operations = [add, subtract, multiply, divide];
+
+
+// for(let miFuncion of operations){
+//     let result = miFuncion(100, 50);
+//     console.log(result);
+// }
+
+// const cosa = {
+//     doSomething : multiply
+// }
+
+// function exterior(){
+//     let hero = 'superman';
+//     function interior(){
+//         let hero = 'batman';
+//         function extraInterior(){
+//             console.log(`Extra interior ${hero}`);    
+//         }
+//         console.log(`Interior ${hero}`);    
+//         extraInterior();
+//     }
+//     interior();
+// }
+
+
+// console.log(Math.floor(Math.random()* 255))
+
+// function getCard(){
+//     const club = ['J', 'Q','K', 'A'];
+//     let  number = (Math.floor(Math.random() * 10)) + 1;    
+//     let miClub = club[(Math.floor(Math.random() * club.length))];
+//     return {
+//             number : number,
+//             club : miClub
+//     }
+// }
 
 // const abecedario = 'abcdefghijklmnñopqrstuvwxyz';
 // function pangram(frase){
