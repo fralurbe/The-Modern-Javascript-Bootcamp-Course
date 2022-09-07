@@ -1,7 +1,71 @@
-function multiply(x,y) {
-  if (typeof y === '')  
-  return x*y;
-}
+// const feline = {
+//   legs : 4,
+//   family : 'Felidae'
+// };
+
+// const canine = {
+//   family: 'Caninae',
+//   furry: true, 
+//   legs : 4
+// };
+
+// const dog = {
+//   ...canine, 
+//   isPet : true,
+//   adorable : true
+// }
+
+// const houseCat = {
+//   ...feline,
+//   isGrumpy : true,
+//   personality: 'unpredictable'
+// }
+
+// const catdog = {  
+//   ...feline,
+//   ...canine
+// }
+
+// const catdogClone = {
+//   ...catdog
+// }
+
+// const random = {...'hello', ...catdog};
+
+
+
+
+// const cephalopods = ['dumbo octupus', 'humboldt squid', 'flamboyant cuttlefish'];
+// const gastropods = ['giant african snail', 'banana slug', 'variable neon slug'];
+// const cnidaria = ['fire coral', 'moon jelly'];
+
+// const cephcopy = [...cephalopods];
+
+// const mollusca = [...cephalopods, ...gastropods];
+
+// const nums1 = [1, 2, 3, 4];
+// const nums2 = [5, 6, 7, 8];
+
+// const todosNums = ['garden slug', ...nums1, ...nums2];
+
+
+// const nums = [2,45,7,3,2];
+// console.log(Math.max(nums));
+// console.log(Math.max(...nums));
+
+// function multiply(x,y) {
+//   if (typeof y === 'undefined')  
+//   y = 1;
+//   return x * y;
+// }
+
+// function multiplyWithDefaultParameter(x , y = 1){
+//   return x * y;
+// }
+
+// const greet = (person, greeting = 'hi') => {  
+//   console.log(greeting, person);
+// }
 
 // const books = [{
 //     title: 'Good Omens',
