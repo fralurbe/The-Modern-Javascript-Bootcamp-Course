@@ -1,3 +1,18 @@
+function sumAll() {
+  const args = [...arguments];
+  return args.reduce((total, currentVal) => {
+    return total + currentVal;
+  })  
+}
+
+function fullName(first, last) {
+  const args = [...arguments];
+  console.log(arguments);
+  console.log(args);  
+}
+
+fullName('primero', 'dasdlkasjld', 'ultimo');
+
 // const feline = {
 //   legs : 4,
 //   family : 'Felidae'
