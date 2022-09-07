@@ -1,3 +1,328 @@
+const books = [{
+    title: 'Good Omens',
+    authors: ['Terry Pratchett', 'Neil Gaiman'],
+    rating: 4.25,
+    genres: ['fiction', 'fantasy']
+  },
+  {
+    title: 'Changing My Mind',
+    authors: ['Zadie Smith'],
+    rating: 3.83,
+    genres: ['nonfiction', 'essays']
+  },
+  {
+    title: 'Bone: The Complete Edition',
+    authors: ['Jeff Smith'],
+    rating: 4.42,
+    genres: ['fiction', 'graphic novel', 'fantasy']
+  },
+  {
+    title: 'American Gods',
+    authors: ['Neil Gaiman'],
+    rating: 4.11,
+    genres: ['fiction', 'fantasy']
+  },
+  {
+    title: 'A Gentleman in Moscow',
+    authors: ['Amor Towles'],
+    rating: 4.36,
+    genres: ['fiction', 'historical fiction']
+  },
+  {
+    title: 'The Name of the Wind',
+    authors: ['Patrick Rothfuss'],
+    rating: 4.54,
+    genres: ['fiction', 'fantasy']
+  },
+  {
+    title: 'The Overstory',
+    authors: ['Richard Powers'],
+    rating: 4.19,
+    genres: ['fiction', 'short stories']
+  },
+  {
+    title: 'The Way of Kings',
+    authors: ['Brandon Sanderson'],
+    rating: 4.65,
+    genres: ['fantasy', 'epic']
+  },
+  {
+    title: 'Lord of the flies',
+    authors: ['William Golding'],
+    rating: 3.67,
+    genres: ['fiction']
+  }
+]
+
+const miLibro = books.reduce((groupedBooks, book) => {
+  const key = book.genres[0];
+  if(!groupedBooks[key])
+    groupedBooks[key] = [];
+  groupedBooks[key].push(book);    
+  return groupedBooks;
+},
+{});
+
+
+// const votes = ['y', 'y', 'y', 'n', 'n', 'absent'];
+
+// if ({n: 1 }['n','n'])
+//   console.log('por if');
+// else
+//   console.log('por else');
+
+
+// const results = votes.reduce((tally, val) => {
+//   if(tally[val]){    
+//     tally[val]++;
+//   }
+//   else{    
+//     tally[val] = 1;
+//   }
+//   console.log(val);
+//   return tally;
+// },
+// {}
+// );
+
+
+// To tally the votes:
+// const results = votes.reduce((tally, val) => {
+//   if (tally[val]) {
+//     tally[val]++
+//   } else {
+//     tally[val] = 1;
+//   }
+//   return tally;
+// }, {})
+
+// const miSuma = [10,20,30,40,50,60].reduce((sum, currValue) =>
+//                                             {console.log(sum);
+//                                             return (sum + currValue)});
+
+// const prices1 = [934.45,284.45,4347.45,43462.45,2225.23,2344,463.23,7772,8001,-1, 0];
+// const maxValue = prices1.reduce((max, currentValue) => {
+//   if (currentValue > max) 
+//     return currentValue;
+//   else
+//     return max;
+// }, 999 )
+
+
+// const minValue = prices1.reduce((min, currentValue) => {
+//   if (min < currentValue)  
+//     return min;
+//   else
+//     return currentValue;
+// })
+
+
+
+// const nums = [9,8,7,6,5,4,3,2,1];
+
+// sumaTotalArray = nums.reduce((total, currentValue) => (total + currentValue));
+// console.log(sumaTotalArray);
+
+// const books = [{
+//     title: 'Good Omens',
+//     authors: ['Terry Pratchett', 'Neil Gaiman'],
+//     rating: 4.25,
+//     genres: ['fiction', 'fantasy']
+//   },
+//   {
+//     title: 'Changing My Mind',
+//     authors: ['Zadie Smith'],
+//     rating: 3.83,
+//     genres: ['nonfiction', 'essays']
+//   },
+//   {
+//     title: 'Bone: The Complete Edition',
+//     authors: ['Jeff Smith'],
+//     rating: 4.42,
+//     genres: ['fiction', 'graphic novel', 'fantasy']
+//   },
+//   {
+//     title: 'American Gods',
+//     authors: ['Neil Gaiman'],
+//     rating: 4.11,
+//     genres: ['fiction', 'fantasy']
+//   },
+//   {
+//     title: 'A Gentleman in Moscow',
+//     authors: ['Amor Towles'],
+//     rating: 4.36,
+//     genres: ['fiction', 'historical fiction']
+//   },
+//   {
+//     title: 'The Name of the Wind',
+//     authors: ['Patrick Rothfuss'],
+//     rating: 4.54,
+//     genres: ['fiction', 'fantasy']
+//   },
+//   {
+//     title: 'The Overstory',
+//     authors: ['Richard Powers'],
+//     rating: 4.19,
+//     genres: ['fiction', 'short stories']
+//   },
+//   {
+//     title: 'The Way of Kings',
+//     authors: ['Brandon Sanderson'],
+//     rating: 4.65,
+//     genres: ['fantasy', 'epic']
+//   },
+//   {
+//     title: 'Lord of the flies',
+//     authors: ['William Golding'],
+//     rating: 3.67,
+//     genres: ['fiction']
+//   }
+// ]
+
+// sumaTotalBooks = books.reduce((accumulator, currentValue) =>
+//                               (accumulator.rating + currentValue.rating));
+
+// books.sort((a, b) => (b.rating - a.rating));
+
+// const prices1 = [934.45,284.45,4347.45,43462.45,2225.23,2344,463.23,7772,8001,-1, 0];
+
+// const badSort = prices1.slice().sort();
+// console.log(badSort);
+
+// const ascendingSort = prices1.slice().sort((a , b) => a - b);
+// console.log(ascendingSort);
+
+// const descendingSort = prices1.slice().sort((a , b) => b - a);
+// console.log(descendingSort);
+
+
+// const words = ['dog', 'dig', 'log', 'bag', 'wa2'];
+// const all3letters = words.every(word => word.length === 3);
+// const finalg = words.every(word => word[word.length-1] === 'g');
+
+// const someStartsWithD = words.some(word => word[0] === 'q');
+
+// const nums = [9,8,7,6,5,4,3,2,1,-1, 0];
+// const impares = nums.filter(n => n % 2 === 1);
+// const grandes = nums.filter(n => n > 5 );
+// const impares2 = nums.map(n => n % 2 === 1);
+
+// const books = [{
+//     title: 'Good Omens',
+//     authors: ['Terry Pratchett', 'Neil Gaiman'],
+//     rating: 4.25,
+//     genres: ['fiction', 'fantasy']
+//   },
+//   {
+//     title: 'Changing My Mind',
+//     authors: ['Zadie Smith'],
+//     rating: 3.83,
+//     genres: ['nonfiction', 'essays']
+//   },
+//   {
+//     title: 'Bone: The Complete Edition',
+//     authors: ['Jeff Smith'],
+//     rating: 4.42,
+//     genres: ['fiction', 'graphic novel', 'fantasy']
+//   },
+//   {
+//     title: 'American Gods',
+//     authors: ['Neil Gaiman'],
+//     rating: 4.11,
+//     genres: ['fiction', 'fantasy']
+//   },
+//   {
+//     title: 'A Gentleman in Moscow',
+//     authors: ['Amor Towles'],
+//     rating: 4.36,
+//     genres: ['fiction', 'historical fiction']
+//   },
+//   {
+//     title: 'The Name of the Wind',
+//     authors: ['Patrick Rothfuss'],
+//     rating: 4.54,
+//     genres: ['fiction', 'fantasy']
+//   },
+//   {
+//     title: 'The Overstory',
+//     authors: ['Richard Powers'],
+//     rating: 4.19,
+//     genres: ['fiction', 'short stories']
+//   },
+//   {
+//     title: 'The Way of Kings',
+//     authors: ['Brandon Sanderson'],
+//     rating: 4.65,
+//     genres: ['fantasy', 'epic']
+//   },
+//   {
+//     title: 'Lord of the flies',
+//     authors: ['William Golding'],
+//     rating: 3.67,
+//     genres: ['fiction']
+//   }
+// ]
+
+// const allGoodBooks = books.every(book => book.rating > 4.5);
+// const someGoodBooks = books.some(book => book.rating > 4.5);
+
+// const librosBuenos = books.filter(b => b.rating > 4.3);
+// const librosFantasy = books.filter( book => (
+//     book.genres.includes('fantasy')
+// ) );
+
+// const query = books.filter(book => (    
+//     book.title.toLowerCase().includes('the')
+// ))
+
+
+// let movies = [
+//     'Willow',
+//     'Alien',
+//     'Alien nation',
+//     'The blob',
+//     'Four rooms'
+// ];
+
+// const movie = movies.find(movie =>  movie.includes('Wi'));
+
+// const movie2 = movies.find(m => (
+//     m.indexOf('Alien ')=== 0
+// ))
+
+
+
+
+//   // Implicit return one-liner:
+//   const square2 = n => n * n;
+  
+  
+//   const nums = [1, 2, 3, 4, 5, 6, 7, 8];
+  
+//   const doubles = nums.map(num=> num*2);
+
+//   const parityList = nums.map(function (n) {
+//     if (n % 2 === 0) return 'even';
+//     return 'odd';
+//   })
+  
+//   const listaPares = nums.map( (num) => {
+//     return (num %2===0) ? 'par': 'impar';
+//   })
+
+//   const parityList2 = nums.map((n) => (
+//     n % 2 === 0 ? 'even' : 'odd'
+//   ));
+  
+//   const parityList3 = nums.map((n) => n % 2 === 0 ? 'even' : 'odd');
+
+// const square = function(x) {
+//     return x*x;
+// } 
+
+// const cuadrado = (x) => {
+//     return x*x;
+// }
 
 
 
