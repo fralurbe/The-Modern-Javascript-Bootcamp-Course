@@ -1,17 +1,79 @@
-function sumAll() {
-  const args = [...arguments];
-  return args.reduce((total, currentVal) => {
-    return total + currentVal;
-  })  
+// const response = [
+//   'http',
+//   '200 ok',
+//   'application/json',
+// ]
+
+// function parseResponse([protocol, patata, type]) {
+//   console.log(`Status: ${patata}`);
+//}
+
+// const fullName = ({first, last }) => {
+//   return `${first} ${last}`
+// }
+
+const runner = 
+{
+  first : "Eliud",
+  last : "Kipchoge",
+  country : "Kenya",  
+  title : 'Elder of the Order'
 }
 
-function fullName(first, last) {
-  const args = [...arguments];
-  console.log(arguments);
-  console.log(args);  
+// fullName(runner);
+
+// function print(person){
+//   const{first, last , country} = person;
+//   console.log(first, last, country);
+// }
+
+function print({first, last, title}){    
+    console.log(first, last, title);
 }
 
-fullName('primero', 'dasdlkasjld', 'ultimo');
+
+// const results = [
+//   {
+//     first : "Eliud",
+//     last : "Kipchoge",
+//     country : "Kenya",  
+//   },
+//   {
+//     first : "Feyisa",
+//     last : "Lelisa",
+//     country : "Ethiopia",  
+//   },
+//   {
+
+//     first : "Galen",
+//     last : "Rupp",
+//     country : "USA",  
+//   }
+// ]
+
+// const prueba = [{first : goldWinner},{country}] = results;
+
+
+
+// const {first, last, ...other} = runner;
+
+// const {country : pais} = runner;
+
+
+// function sumAll() {
+//   const args = [...arguments];
+//   return args.reduce((total, currentVal) => {
+//     return total + currentVal;
+//   })  
+// }
+
+// function fullName(first, last) {
+//   const args = [...arguments];
+//   console.log(arguments);
+//   console.log(args);  
+// }
+
+// fullName('primero', 'dasdlkasjld', 'ultimo');
 
 // const feline = {
 //   legs : 4,
