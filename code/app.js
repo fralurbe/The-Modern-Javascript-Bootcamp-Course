@@ -1,3 +1,67 @@
+const auth = {
+  username: 'TommyBot',
+  login: () => {
+    console.log('logged in')
+  },
+  logout() {
+    console.log('goodbye')
+  }
+}
+
+
+const math = {
+  add : function(x,y) {
+    return x+y;
+  },
+  multiply : function(x,y) {
+    return x * y;
+  }
+}
+
+// const role = 'host';
+// const person = 'Jools Holland'
+// const role2 = 'Director';
+// const person2 = 'Alfred Hitchcok'
+
+
+// // const team = {};
+// // team[role] = person;
+// // team[role2] = person2;
+
+// const team = {
+//   [role]: person,
+//   [role2]: person2,  
+// }
+
+// const teamCopy = {...team, hola:true};
+
+// const addProp = (obj, k, v) => {
+//   return{
+//     ...obj,
+//     [k]:v
+//   };
+// }
+
+// addProp(team,'Script girl', 'Luisa Lanas');
+
+
+
+// team.role2 = role2;
+// team.person2 = person2;
+
+// const getStats = (input) => {
+//   console.log('...input: ',...input);
+//   console.log('input: ',input);
+//   min = Math.min(...input);
+//   max = Math.max(...input);
+//   sum = input.reduce((acum, value) => acum + value);
+//   return {min, max, sum};
+// }
+
+// const notas = [3.3, 6.7, 8.7, 5.6, 10];
+
+// const stats = getStats(notas);
+
 // const response = [
 //   'http',
 //   '200 ok',
@@ -12,13 +76,13 @@
 //   return `${first} ${last}`
 // }
 
-const runner = 
-{
-  first : "Eliud",
-  last : "Kipchoge",
-  country : "Kenya",  
-  title : 'Elder of the Order'
-}
+// const runner = 
+// {
+//   first : "Eliud",
+//   last : "Kipchoge",
+//   country : "Kenya",  
+//   title : 'Elder of the Order'
+// }
 
 // fullName(runner);
 
@@ -27,9 +91,9 @@ const runner =
 //   console.log(first, last, country);
 // }
 
-function print({first, last, title}){    
-    console.log(first, last, title);
-}
+// function print({first, last, title}){    
+//     console.log(first, last, title);
+// }
 
 
 // const results = [
