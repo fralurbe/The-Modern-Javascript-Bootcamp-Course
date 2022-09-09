@@ -1,22 +1,146 @@
-const auth = {
-  username: 'TommyBot',
-  login: () => {
-    console.log('logged in')
-  },
-  logout() {
-    console.log('goodbye')
+const makeDeck = () => {  
+  return {
+    deck : [],
+    drawnCards : [],
+    suits : ['hearts', 'diamonds', 'spades', 'clubs'],
+    values : '2,3,4,5,6,7,8,9,10,J,Q,K,A',
+    initializeDeck(){
+      const {
+        suits,
+        values,
+        deck
+      } = this;
+      deck.length = 0;
+      for (let value of values.split(',')) {
+        for (let suit of suits) {
+          deck.push({
+            value,
+            suit
+          })
+        }
+      }
+      return deck;
+    },
+    drawCard() {
+      const card = this.deck.pop();
+      this.drawnCards.push(card);
+      return card;
+    },
+    drawMultiple(numCards) {
+      const cards = [];
+      for (let i = 0; i< numCards; i++){
+        cards.push(this.drawCard());
+      }
+      return cards;
+    },
+    shuffle() {
+      const {deck} = this;
+      for (let i = deck.length -1; i > 0; i--) {
+        let j = Math.floor(Math.random() * (i+1));
+        [deck[i], deck[j]] = [deck[j], deck[i]];     
+      }
+      // console.log(deck);
+    }
   }
 }
 
+const myDeck = makeDeck();
+const myDeck2 = makeDeck();
 
-const math = {
-  add : function(x,y) {
-    return x+y;
-  },
-  multiply : function(x,y) {
-    return x * y;
-  }
-}
+// function shuffle(arr){
+//   for (let i = arr.length -1; i>0; i--){
+//     let j = Math.floor(Math.random() * (i+1));
+//     [arr[i], arr[j]] = [arr[j], arr[i]];
+//     console.log(arr);
+//   }
+// }
+
+// function drawCard(deck){
+//   return deck.pop();
+// }
+
+
+
+// }
+
+// const annoyer = {
+//   phrases: ["literally", "cray cray", "I can't even",
+//   "Totes!", "YOLO", "Can't Stop, Won't Stop"],
+//   pickPhrase() {
+//     const{phrases} = this;
+//     const idx = Math.floor(Math.random() * phrases.length);
+//     return phrases[idx];
+//   },
+//   start() {
+    
+//     this.timerId = setInterval(() =>{
+//       console.log(this.pickPhrase())      
+//     }, 4000)
+//   },
+//   stop() {
+//     clearInterval(this.timerId)
+//   }
+// }
+
+
+
+
+
+
+// const miobj = {  
+// }
+
+// function sayHi(){
+//   console.log('hi');
+//   console.log(this);
+// }
+// const person = {
+//   first : 'Cherilyn',
+//   last : 'Sarkisian',
+//   nickname : 'Cher',
+//   fullname() {
+//     const {
+//       first,
+//       last,
+//       nickname
+//     } = this;    
+//     return(`${first} ${last} aka ${nickname}`);
+//   },
+//   printBio() {
+//     console.log(this.fullname(), 'is a person')
+//   },
+//   laugh: ()=>{
+//     console.log(this);
+//     console.log(`${this.nickname} says hahahah`);
+//   }
+
+// }
+
+// const printBio = person.printBio;
+
+
+// const auth = {
+//   username: 'TommyBot',
+//   login: () => {
+//     console.log('logged in');
+//   },
+//   logout() {
+//     console.log('goodbye');
+//   },
+//   otramanera :  function(x) {
+//     console.log('otra manera', x);
+//   }
+// }
+
+
+// const math = {
+//   add : function(x,y) {
+//     return x+y;
+//   },
+//   multiply : function(x,y) {
+//     return x * y;
+//   }
+// }
 
 // const role = 'host';
 // const person = 'Jools Holland'
