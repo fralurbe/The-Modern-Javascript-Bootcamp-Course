@@ -1,51 +1,82 @@
-const makeDeck = () => {  
-  return {
-    deck : [],
-    drawnCards : [],
-    suits : ['hearts', 'diamonds', 'spades', 'clubs'],
-    values : '2,3,4,5,6,7,8,9,10,J,Q,K,A',
-    initializeDeck(){
-      const {
-        suits,
-        values,
-        deck
-      } = this;
-      deck.length = 0;
-      for (let value of values.split(',')) {
-        for (let suit of suits) {
-          deck.push({
-            value,
-            suit
-          })
-        }
-      }
-      return deck;
-    },
-    drawCard() {
-      const card = this.deck.pop();
-      this.drawnCards.push(card);
-      return card;
-    },
-    drawMultiple(numCards) {
-      const cards = [];
-      for (let i = 0; i< numCards; i++){
-        cards.push(this.drawCard());
-      }
-      return cards;
-    },
-    shuffle() {
-      const {deck} = this;
-      for (let i = deck.length -1; i > 0; i--) {
-        let j = Math.floor(Math.random() * (i+1));
-        [deck[i], deck[j]] = [deck[j], deck[i]];     
-      }
-      // console.log(deck);
-    }
-  }
-}
 
-const myDeck = makeDeck();
-const myDeck2 = makeDeck();
+
+
+const myH2 = document.createElement('h2');
+
+
+// const todo = document.querySelector('#todos .todo');
+
+
+
+
+// const allLis = document.querySelectorAll('li');
+// const colors = ['red','orange','yellow','green', 'blue', 'purple'];
+
+
+// allLis.forEach((li, index) =>{
+//   const color = colors[index];
+//   li.style.color = color;
+// })
+
+
+// const allLis = document.querySelectorAll('li');
+// for (let i = 0; i< allLis.length; i++){
+//   console.log(allLis[i].innerText);
+// }
+
+// for (let li of allLis){
+//   li.innerHTML=('We are <b> THE CHAMPIONS</b>')
+// }
+
+
+// const makeDeck = () => {  
+//   return {
+//     deck : [],
+//     drawnCards : [],
+//     suits : ['hearts', 'diamonds', 'spades', 'clubs'],
+//     values : '2,3,4,5,6,7,8,9,10,J,Q,K,A',
+//     initializeDeck(){
+//       const {
+//         suits,
+//         values,
+//         deck
+//       } = this;
+//       deck.length = 0;
+//       for (let value of values.split(',')) {
+//         for (let suit of suits) {
+//           deck.push({
+//             value,
+//             suit
+//           })
+//         }
+//       }
+//       return deck;
+//     },
+//     drawCard() {
+//       const card = this.deck.pop();
+//       this.drawnCards.push(card);
+//       return card;
+//     },
+//     drawMultiple(numCards) {
+//       const cards = [];
+//       for (let i = 0; i< numCards; i++){
+//         cards.push(this.drawCard());
+//       }
+//       return cards;
+//     },
+//     shuffle() {
+//       const {deck} = this;
+//       for (let i = deck.length -1; i > 0; i--) {
+//         let j = Math.floor(Math.random() * (i+1));
+//         [deck[i], deck[j]] = [deck[j], deck[i]];     
+//       }
+//       // console.log(deck);
+//     }
+//   }
+// }
+
+// const myDeck = makeDeck();
+// const myDeck2 = makeDeck();
 
 // function shuffle(arr){
 //   for (let i = arr.length -1; i>0; i--){
