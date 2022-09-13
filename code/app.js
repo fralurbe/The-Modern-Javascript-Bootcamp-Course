@@ -1,13 +1,13 @@
 
 
 
-const myH2 = document.createElement('h2');
 
+
+
+
+//const myH2 = document.createElement('h2');
 
 // const todo = document.querySelector('#todos .todo');
-
-
-
 
 // const allLis = document.querySelectorAll('li');
 // const colors = ['red','orange','yellow','green', 'blue', 'purple'];
